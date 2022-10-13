@@ -2,4 +2,5 @@
 pip install PySimpleGUI
 pip install wget
 python Main.py
-pause
+echo Press any key to exit
+pause>nul
