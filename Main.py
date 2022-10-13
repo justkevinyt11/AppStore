@@ -7,7 +7,7 @@ layout = [
     [sg.Button("Minecraft", button_color='#343434'), sg.Button("Discord", button_color='#343434'), sg.Button("OBS", button_color='#343434'),
      sg.Button("Streamlabs", button_color='#343434'), sg.Button("Brave", button_color='#343434'), sg.Button("Winrar", button_color='#343434')],
     [sg.Button('Warzone', button_color='#343434'), sg.Button('Oprea', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
-     sg.Button('Steam', button_color='#343434')],
+     sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -43,6 +43,7 @@ while True:
         wget.download(url, 'winrar.exe')
         os.system('.\winrar.exe')
     elif event == "Warzone":
+        sg.Popup('This is a large app, while downloading this app the app store will hang')
         url = 'https://www.battle.net/download/getInstallerForGame?os=win&gameProgram=CODMW&version=Live'
         wget.download(url, "Warzone.exe")
         os.system('.\Warzone.exe')
@@ -58,4 +59,9 @@ while True:
         url = 'https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe'
         wget.download(url, 'Steam.exe')
         os.system('.\Steam.exe')
+    elif event == 'Resolve':
+        sg.Popup('This is a large app, while downloading this app the app store will hang')
+        url = 'https://sw.blackmagicdesign.com/DaVinciResolve/v18.0.4/DaVinci_Resolve_18.0.4_Windows.zip?Key-Pair-Id=APKAJTKA3ZJMJRQITVEA&Signature=BdbWvCoh7LlGRzd/duFXDSajMdvh+z/2M5BrS6MqjK9t9XDqm5vE3JZkw8TuGbUjaQVsfAbKc8G7uyPdccRpeUwxLqz/73Qb6A32ebRd6ToVmiS/zGAYwZ3mlusaIqubv+nS6WlrK2LhhOJ829HGJ1GTTDkOwaMVN75Yju8R2MG2zEQEgBiCJnMyuAUwC8dI3ZQMiJUCs+W3PugpK+8RQPSU0BnI/t33EzJQZoYFtRNSUxhZdzQAXSgYxSQg5+UwJNH1z+VxLme+QaW408n5Dtt//1d+xu1+hddS8+i1IWehHmR/DwWJjXLwTd3bTd5YkJbfS2Q3xcyViEC1IMMpmQ==&Expires=1665702078'
+        wget.download(url, 'Resolve.exe')
+        os.system('.\Resolve.exe')
 window.close()
