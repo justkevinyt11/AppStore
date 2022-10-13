@@ -7,7 +7,7 @@ layout = [
     [sg.Button("Minecraft", button_color='#343434'), sg.Button("Discord", button_color='#343434'), sg.Button("OBS", button_color='#343434'),
      sg.Button("Streamlabs", button_color='#343434'), sg.Button("Brave", button_color='#343434'), sg.Button("Winrar", button_color='#343434')],
     [sg.Button('Warzone', button_color='#343434'), sg.Button('Oprea', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
-     sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434')],
+     sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -64,4 +64,9 @@ while True:
         url = 'https://sw.blackmagicdesign.com/DaVinciResolve/v18.0.4/DaVinci_Resolve_18.0.4_Windows.zip?Key-Pair-Id=APKAJTKA3ZJMJRQITVEA&Signature=BdbWvCoh7LlGRzd/duFXDSajMdvh+z/2M5BrS6MqjK9t9XDqm5vE3JZkw8TuGbUjaQVsfAbKc8G7uyPdccRpeUwxLqz/73Qb6A32ebRd6ToVmiS/zGAYwZ3mlusaIqubv+nS6WlrK2LhhOJ829HGJ1GTTDkOwaMVN75Yju8R2MG2zEQEgBiCJnMyuAUwC8dI3ZQMiJUCs+W3PugpK+8RQPSU0BnI/t33EzJQZoYFtRNSUxhZdzQAXSgYxSQg5+UwJNH1z+VxLme+QaW408n5Dtt//1d+xu1+hddS8+i1IWehHmR/DwWJjXLwTd3bTd5YkJbfS2Q3xcyViEC1IMMpmQ==&Expires=1665702078'
         wget.download(url, 'Resolve.exe')
         os.system('.\Resolve.exe')
+    elif event == "Lightworks":
+        url = 'https://cdn.lwks.com/releases/2022.3/lightworks_2022.3_r137309_64bit_setup.exe'
+        wget.download(url, 'lkws.exe')
+        os.system('.\lkws.exe')
+
 window.close()
