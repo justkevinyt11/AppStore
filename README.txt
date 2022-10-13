@@ -7,3 +7,5 @@ If you have any errors make sure u have done the following:
 5) Inside the System Properties screen, go to the Advanced tab, then click on Environment Variables.
 6) In the Environment Variables screen, go to System variables and click on Path to select it. Then with the Path selected, click the Edit… button.
 7) In the Edit environment variable screen, click on New and add the path where the PiP installation is located. For Python 3.4, the default location is C:\Python34\Scripts. If you installed python from windows store the default path is C:\Users\*YOURUSER*\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\python.exe
+
+If you need any more support please reach out to me on discord at justkevinyt11#5377 (Will be updated to a discord server later)
