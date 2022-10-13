@@ -8,6 +8,7 @@ layout = [
      sg.Button("Streamlabs", button_color='#343434'), sg.Button("Brave", button_color='#343434'), sg.Button("Winrar", button_color='#343434')],
     [sg.Button('Warzone', button_color='#343434'), sg.Button('Oprea', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
+    [sg.Button("VLC", button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -68,5 +69,10 @@ while True:
         url = 'https://cdn.lwks.com/releases/2022.3/lightworks_2022.3_r137309_64bit_setup.exe'
         wget.download(url, 'lkws.exe')
         os.system('.\lkws.exe')
+    elif event == "VLC":
+        sg.Popup('This is a large app, while downloading this app the app store will hang')
+        url = 'https://mirror2.sandyriver.net/pub/software/videolan/vlc/3.0.17.4/win64/vlc-3.0.17.4-win64.exe'
+        wget.download(url, 'VLC.exe')
+        os.system('.\VLC.exe')
 
 window.close()
