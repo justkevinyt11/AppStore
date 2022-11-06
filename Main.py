@@ -10,7 +10,7 @@ layout = [
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
     [sg.Button("VLC", button_color='#343434'), sg.Button('Onix', button_color='#343434'), sg.Button('Notepad++', button_color='#343434'),
      sg.Button('Audacity', button_color='#343434'), sg.Button("Spotify", button_color='#343434'), sg.Button('Badlion', button_color='#343434')],
-    [sg.Button('Lunar', button_color='#343434')],
+    [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -109,12 +109,18 @@ while True:
         os.system('SpotifySetup.exe')
         print('Installer Opened')
     elif event == "Badlion":
-        url = 'https://www.badlion.net/download/client/latest/windows'
+        sg.Popup('This is a large app, while downloading this app the app store might hang')
+        url = 'https://download940.mediafire.com/ctyl9gpthvig/xzk4xb87tt0136q/Badlion+Client+Setup+3.12.0.exe'
         wget.download(url, 'badlionSetup.exe')
         os.system('badlionSetup.exe')
     elif event == "Lunar":
-        url = 'https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v2.14.0.exe'
+        url = 'https://download1514.mediafire.com/4j3fxhr4ppqg/jdjgqaky0cjqh16/Lunar+Client+v2.14.0.exe'
         wget.download(url, 'LunarClient.exe')
         os.system('LunarClient.exe')
+    elif event == "Vs Code":
+        sg.Popup('This is a large app, while downloading this app the app store might hang')
+        url = 'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user'
+        wget.download(url, 'vscode.exe')
+        os.system('vscode.exe')
 
 window.close()
