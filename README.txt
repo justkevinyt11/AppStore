@@ -1,3 +1,6 @@
+Releases:
+https://github.com/justkevinyt11/AppStore/releases
+
 If you have any errors make sure u have done the following:
 
 1) Install python (https://apps.microsoft.com/store/detail/python-37/9NJ46SX7X90P?hl=en-us&gl=us)
