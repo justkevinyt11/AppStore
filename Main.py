@@ -8,7 +8,7 @@ layout = [
      sg.Button("Streamlabs", button_color='#343434'), sg.Button("Brave", button_color='#343434'), sg.Button("Winrar", button_color='#343434')],
     [sg.Button('Warzone', button_color='#343434'), sg.Button('Opera', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
-    [sg.Button("VLC", button_color='#343434'), sg.Button('Onix Client', button_color='#343434')],
+    [sg.Button("VLC", button_color='#343434'), sg.Button('Onix Client', button_color='#343434'), sg.Button('Notepad++', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -76,5 +76,9 @@ while True:
         os.system('.\VLC.exe')
     elif event == "Onix Client":
         os.system('powershell.exe $code = Invoke-RestMethod "https://raw.githubusercontent.com/bernarddesfosse/onixclientautoupdate/main/zLauncherInstallScript.ps1"; foreach($a in $code) {iex $a;}')
+    elif event == "Notepad++":
+        url = 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.6/npp.8.4.6.Installer.x64.exe'
+        wget.download(url, 'padPlusPlus.exe')
+        os.system('.\padPlusPlus.exe')
 
 window.close()
