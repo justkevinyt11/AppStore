@@ -10,7 +10,7 @@ layout = [
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
     [sg.Button("VLC", button_color='#343434'), sg.Button('Onix', button_color='#343434'), sg.Button('Notepad++', button_color='#343434'),
      sg.Button('Audacity', button_color='#343434'), sg.Button("Spotify", button_color='#343434'), sg.Button('Badlion', button_color='#343434')],
-    [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434')],
+    [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434'), sg.Button('Epic Games', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -113,14 +113,22 @@ while True:
         url = 'https://download940.mediafire.com/ctyl9gpthvig/xzk4xb87tt0136q/Badlion+Client+Setup+3.12.0.exe'
         wget.download(url, 'badlionSetup.exe')
         os.system('badlionSetup.exe')
+        print('Installer Opened')
     elif event == "Lunar":
         url = 'https://download1514.mediafire.com/4j3fxhr4ppqg/jdjgqaky0cjqh16/Lunar+Client+v2.14.0.exe'
         wget.download(url, 'LunarClient.exe')
         os.system('LunarClient.exe')
+        print('Installer Opened')
     elif event == "Vs Code":
         sg.Popup('This is a large app, while downloading this app the app store might hang')
         url = 'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user'
         wget.download(url, 'vscode.exe')
         os.system('vscode.exe')
-
+        print('Installer Opened')
+    elif event == "Epic Games":
+        sg.Popup('This is a large app, while downloading this app the app store might hang')
+        url = 'https://download1580.mediafire.com/9dq5b9zqsy8g/dpcigamy651ifuh/EpicInstaller-14.2.1-1.msi'
+        wget.download(url, 'EpicGames.exe')
+        os.system('EpicGames.exe')
+        print('Installer Opened')
 window.close()
