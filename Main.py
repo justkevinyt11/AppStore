@@ -10,7 +10,8 @@ layout = [
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
     [sg.Button("VLC", button_color='#343434'), sg.Button('Onix', button_color='#343434'), sg.Button('Notepad++', button_color='#343434'),
      sg.Button('Audacity', button_color='#343434'), sg.Button("Spotify", button_color='#343434'), sg.Button('Badlion', button_color='#343434')],
-    [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434'), sg.Button('Epic Games', button_color='#343434')],
+    [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434'), sg.Button('Epic Games', button_color='#343434'),
+     sg.Button('Blender', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -128,7 +129,12 @@ while True:
     elif event == "Epic Games":
         sg.Popup('This is a large app, while downloading this app the app store might hang')
         url = 'https://download1580.mediafire.com/9dq5b9zqsy8g/dpcigamy651ifuh/EpicInstaller-14.2.1-1.msi'
-        wget.download(url, 'EpicGames.exe')
-        os.system('EpicGames.exe')
+        wget.download(url, 'EpicGames.msi')
+        os.system('EpicGames.msi')
+        print('Installer Opened')
+    elif event == "Blender":
+        url = 'https://mirrors.ocf.berkeley.edu/blender/release/Blender3.3/blender-3.3.1-windows-x64.msi'
+        wget.download(url, 'blender.msi')
+        os.system('blender.msi')
         print('Installer Opened')
 window.close()
