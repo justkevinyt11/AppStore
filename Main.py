@@ -6,9 +6,9 @@ layout = [
     [sg.Text("App Store", background_color='#2C2825')],
     [sg.Button("Minecraft", button_color='#343434'), sg.Button("Discord", button_color='#343434'), sg.Button("OBS", button_color='#343434'),
      sg.Button("Streamlabs", button_color='#343434'), sg.Button("Brave", button_color='#343434'), sg.Button("Winrar", button_color='#343434')],
-    [sg.Button('Warzone', button_color='#343434'), sg.Button('Oprea', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
+    [sg.Button('Warzone', button_color='#343434'), sg.Button('Opera', button_color='#343434'), sg.Button('Greenshot', button_color='#343434'),
      sg.Button('Steam', button_color='#343434'), sg.Button('Resolve', button_color='#343434'), sg.Button('Lightworks', button_color='#343434')],
-    [sg.Button("VLC", button_color='#343434')],
+    [sg.Button("VLC", button_color='#343434'), sg.Button('Onix Client', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -48,10 +48,10 @@ while True:
         url = 'https://www.battle.net/download/getInstallerForGame?os=win&gameProgram=CODMW&version=Live'
         wget.download(url, "Warzone.exe")
         os.system('.\Warzone.exe')
-    elif event == "Oprea":
+    elif event == "Opera":
         url = 'https://net.geo.opera.com/opera_gx/stable/windows?utm_tryagain=yes&utm_source=PWNgames&utm_medium=pa&utm_campaign=PWN_US&edition=std-1&utm_content=3191_11000&utm_id=25495247d8974a2383b5d34927dc3a90&http_referrer=missing&utm_site=opera_com&&utm_lastpage=opera.com/'
-        wget.download(url, 'opreagx.exe')
-        os.system('.\opreagx.exe')
+        wget.download(url, 'operagx.exe')
+        os.system('.\operagx.exe')
     elif event == "Greenshot":
         url = 'https://github.com/greenshot/greenshot/releases/download/Greenshot-RELEASE-1.2.10.6/Greenshot-INSTALLER-1.2.10.6-RELEASE.exe'
         wget.download(url, "Greenshot.exe")
@@ -74,5 +74,7 @@ while True:
         url = 'https://mirror2.sandyriver.net/pub/software/videolan/vlc/3.0.17.4/win64/vlc-3.0.17.4-win64.exe'
         wget.download(url, 'VLC.exe')
         os.system('.\VLC.exe')
+    elif event == "Onix Client":
+        os.system('powershell.exe $code = Invoke-RestMethod "https://raw.githubusercontent.com/bernarddesfosse/onixclientautoupdate/main/zLauncherInstallScript.ps1"; foreach($a in $code) {iex $a;}')
 
 window.close()
