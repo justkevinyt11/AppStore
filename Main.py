@@ -11,7 +11,7 @@ layout = [
     [sg.Button("VLC", button_color='#343434'), sg.Button('Onix', button_color='#343434'), sg.Button('Notepad++', button_color='#343434'),
      sg.Button('Audacity', button_color='#343434'), sg.Button("Spotify", button_color='#343434'), sg.Button('Badlion', button_color='#343434')],
     [sg.Button('Lunar', button_color='#343434'), sg.Button('Vs Code', button_color='#343434'), sg.Button('Epic Games', button_color='#343434'),
-     sg.Button('Blender', button_color='#343434')],
+     sg.Button('Blender', button_color='#343434'), sg.Button('PowerToys', button_color='#343434')],
     [sg.Button("Exit", button_color='#343434')]
 ]
 sg.theme('DarkAmber')
@@ -136,5 +136,10 @@ while True:
         url = 'https://mirrors.ocf.berkeley.edu/blender/release/Blender3.3/blender-3.3.1-windows-x64.msi'
         wget.download(url, 'blender.msi')
         os.system('blender.msi')
+        print('Installer Opened')
+    elif event == 'PowerToys':
+        url = 'https://github.com/microsoft/PowerToys/releases/download/v0.64.1/PowerToysSetup-0.64.1-x64.exe'
+        wget.download(url, 'PowerToys.exe')
+        os.system('PowerToys.exe')
         print('Installer Opened')
 window.close()
